@@ -24,7 +24,14 @@ def fetch_video():
 		        'outtmpl': 'app.config["DOWNLOAD_FOLDER"]%(id)s.%(ext)s'
 		}
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-			ydl.extract_info(session['video_url'])
-
+			video_info = ydl.extract_info(session['video_url'])
+			session['filename'] = video_info['id']+video_info['ext']
+			
+		return redirect(url_for('play_video'))
+		
 	except: 
 		return "error occoured in fetching Video! Make sure you entered correct URL. Return to home:<a href='"+url_for('index')+"'>Home</a> "
+
+@app.route('/play_video')
+def play_video():
+	return render_template('play_video.html')
