@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="angularJsStub">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <h1 class="text-center">App to watch youtube videos in a restricted network <small>Necessity is the mother of invention</small></h1>
+            <h6 class="text-center">You can watch youtube videos with video url</h6>
+        </header>
+        <section class="container" style="align:center">
+            <div class="row text-center">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    
+            <h4 class="text-center">Enter video Url</h4>
+            <form class="form-horizontal" action="" method=post>
+                
+                    <div class="form-group">
+                        <label>Video Url</label>
+                        <input class="form-control" type='text' name=video_url>
+                    </div>
+                    <button class="btn btn-default" type='submit'>Submit</button>
+            </form>
+        </section>
+
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+    </body>
+</html> 
