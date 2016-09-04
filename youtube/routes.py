@@ -7,7 +7,7 @@ from youtube import app
 @app.route('/', methods=['GET','POST'])
 def index():
 	try:
-		if request.method = 'POST':
+		if request.method == 'POST':
 			session['video_url'] = request.form['video_url']
 			return redirect(url_for('fetch_video'))
 		return render_template('index.html')
@@ -24,7 +24,7 @@ def fetch_video():
 		        'outtmpl': 'app.config["DOWNLOAD_FOLDER"]%(id)s.%(ext)s'
 		}
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-			ydl.extract_info(session['video_url')
+			ydl.extract_info(session['video_url'])
 
 	except: 
 		return "error occoured in fetching Video! Make sure you entered correct URL. Return to home:<a href='"+url_for('index')+"'>Home</a> "
