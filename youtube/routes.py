@@ -25,7 +25,7 @@ def fetch_video():
 		}
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 			video_info = ydl.extract_info(session['video_url'])
-			session['filename'] = video_info['id']+video_info['ext']
+			session['filename'] = video_info['id']+"."+video_info['ext']
 			
 		return redirect(url_for('play_video'))
 		
