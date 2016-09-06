@@ -21,7 +21,7 @@ def fetch_video():
 		import youtube_dl
 		
 		ydl_opts = {
-		        'outtmpl': 'tmp/%(id)s.%(ext)s'
+		        'outtmpl': 'youtube/static/%(id)s.%(ext)s'
 		}
 		with youtube_dl.YoutubeDL(ydl_opts) as ydl:
 			video_info = ydl.extract_info(session['video_url'])
