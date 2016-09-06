@@ -12,12 +12,13 @@
             <div class="row text-center">
                 <div class="col-sm-6 col-md-4 col-md-offset-4">
                
-		<video controls>
-			<source src={{ url_for('static', filename=session['filename']) }}>
-		Your Browser does not support video tag.
-		</video>     
-                
                 </div>
+		
+		<video controls>
+                        <source src={{ url_for('static', filename=session['filename']) }}>
+                Your Browser does not support video tag.
+                </video>		
+
             </div>
         </section>
 
