@@ -36,7 +36,7 @@ def fetch_video():
 def play_video():
 	return render_template('play_video.html')
 
-@app.route('/command')
+@app.route('/command', methods=['GET','POST'])
 def command():
 	try:
                 if request.method == 'POST':
