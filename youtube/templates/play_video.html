@@ -3,7 +3,6 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    	<link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -22,7 +21,7 @@
             		</form>
                 </div>
 		
-		<video id="my-video" class="video-js" controls preload="auto">
+		<video id="my-video" controls preload="auto">
                         <source src={{ url_for('static', filename=session['filename']) }}>
                 Your Browser does not support video tag.
                 </video>		
@@ -35,6 +34,5 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-    <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
     </body>
 </html> 
